@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--第一部分：伸缩工具栏-->
+<!--    AppBarLayout：使得toolbar有收缩和扩展的效果-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+<!--CollapsingToolbarLayout：可折叠的toolbar布局-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title=""
+            app:titleEnabled="false">
+<!--背景图-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:background="@drawable/img_default_background2"
+                android:scaleType="fitXY" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<!--头像(圆形图片)-->
+                <ImageView
+                    android:id="@+id/header_image"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:layout_marginTop="68dp"
+                    android:src="@drawable/img_default_header"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+<!--用户名-->
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="NICKNAME"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/header_image" />
+<!--关注-->
+                <TextView
+                    android:id="@+id/tv_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关注："
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_followNum"
+                    app:layout_constraintTop_toTopOf="@+id/tv_followNum" />
+
+                <TextView
+                    android:id="@+id/tv_followNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+<!--分隔-->
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="|"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nickname" />
+<!--粉丝-->
+                <TextView
+                    android:id="@+id/tv_follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="粉丝："
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/textView5"
+                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/tv_followerNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/tv_follower"
+                    app:layout_constraintTop_toTopOf="@+id/tv_follower" />
+<!--简介-->
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="简介："
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_signature"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/tv_signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView8"
+                    app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/personal_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/appbar_bg3"
+                android:minHeight="56dp"
+                app:layout_collapseMode="pin"
+                app:title="">
+
+                <TextView
+                    android:id="@+id/btn_back"
+                    android:layout_width="64dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:text="返回"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="个人主页"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout_personal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/toolbarBg"
+            app:tabIndicatorColor="@color/theme_orange"
+            app:tabIndicatorHeight="4dp"
+            app:tabSelectedTextColor="@color/theme_orange"
+            android:tooltipText="评论"
+            app:tabTextColor="#000000"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--第二部分：主要内容-->
+<!--    NestedScrollView：支持嵌套滑动的 ScrollView。-->
+<!--    在一些需要支持嵌套滑动的情景中，比如一个 ScrollView 内部包裹一个 RecyclerView，那么就会产生滑动冲突-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="40dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager_personal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

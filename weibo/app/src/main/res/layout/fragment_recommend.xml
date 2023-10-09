@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.RecommendFragment">
+
+    <!--    关注/推荐的顶部bar-->
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/recommend_sliding_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/up_tab"
+        tl:tl_indicator_style="BLOCK"
+        tl:tl_indicator_color="#F7CF4D"
+        tl:tl_textBold="BOTH"
+        tl:tl_textSelectColor="@color/white"
+        tl:tl_textUnselectColor="@color/up_tab_unselect"
+        tl:tl_textsize="18sp" />
+    <!--   分隔线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <com.example.weibo.view.FixedViewPager
+        android:id="@+id/recommend_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

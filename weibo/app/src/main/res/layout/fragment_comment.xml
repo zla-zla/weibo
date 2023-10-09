@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.CommentFragment">
+
+<!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="@string/hello_blank_fragment" />-->
+<!--    <ExpandableListView-->
+<!--        android:id="@+id/detail_page_lv_comment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:divider="@null"-->
+<!--        android:layout_marginBottom="64dp"-->
+<!--        android:listSelector="@android:color/transparent"-->
+<!--        android:scrollbars="none"/>-->
+    <com.jidcoo.android.widget.commentview.CommentView
+        android:id="@+id/commentView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/editor"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

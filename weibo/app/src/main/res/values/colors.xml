@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="divider">#e8e7e7</color>
+    <color name="up_tab">#FAFAFA</color>
+    <color name="up_tab_select">#333333</color>
+    <color name="up_tab_unselect">#929292</color>
+    <color name="slide_block">#FDA700</color>
+
+    <color name="color_69">#999999</color>
+    <color name="color_f6">#f6f6f6</color>
+    <!--  textView的默认颜色  -->
+    <color name="textView_default">#888888</color>
+    <!--  主题色  -->
+    <color name="theme_orange">#FF8C00</color>
+    <!--  普通背景色  -->
+    <color name="background">#E6E6E6</color>
+    <!--  工具栏背景色  -->
+    <color name="toolbarBg">#F0F0F0</color>
+
+    <color name="colorAccent">#D81B60</color>
+
+<!--    评论-->
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0393D5</color>
+
+    <color name="gray_d8">#ffd8d8d8</color>
+    <color name="gray_F1EBEB">#595151</color>
+    <color name="color_6f">#6f6f6f</color>
+    <color name="gray_9b">#9B9B9B</color>
+    <color name="black_21">#212121</color>
+    <color name="transparent">#00000000</color>
+</resources>

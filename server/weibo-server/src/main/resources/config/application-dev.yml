@@ -1,0 +1,6 @@
+swagger:
+  enabled: true
+
+web:
+  upload-postimg: D:/weibo_resources/post_img/   # 存储博客的图片
+  upload-profile: D:/weibo_resources/profile/  # 存储用户头像的图片
